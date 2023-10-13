@@ -1,0 +1,6 @@
+PWD c:/Users/Mathieu/Desktop/MidtermEdit/FallMidterms2023/STAT-2910
+INPUT c:/texlive/2023/texmf.cnf
+INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT c:/Users/Mathieu/Desktop/MidtermEdit/FallMidterms2023/STAT-2910/2910_prac4.tex
+OUTPUT 2910_prac4.log
