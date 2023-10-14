@@ -28,11 +28,9 @@ INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 OUTPUT Stat_Midterm.pdf
 INPUT c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT Stat_Midterm.aux
-INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb

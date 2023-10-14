@@ -1,10 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1697254668 "c:/Users/Mathieu/Desktop/MidtermEdit/FallMidterms2023/STAT-2910/Stat_Midterm.tex" "Stat_Midterm.pdf" "Stat_Midterm" 1697254669 0
-  "Stat_Midterm.aux" 1697254669 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
-  "Stat_Midterm.tex" 1697254667 7839 1a6ccccecb02a3c1bd7f672316c7005a ""
-  "c:/Users/Mathieu/Desktop/MidtermEdit/FallMidterms2023/STAT-2910/Stat_Midterm.tex" 1697254667 7839 1a6ccccecb02a3c1bd7f672316c7005a ""
+["pdflatex"] 1697256411 "c:/Users/Mathieu/Desktop/MidtermEdit/FallMidterms2023/STAT-2910/Stat_Midterm.tex" "Stat_Midterm.pdf" "Stat_Midterm" 1697256412 0
+  "Stat_Midterm.aux" 1697256412 32 77e0dffd05b653a64f0caf3eb9bb454a "pdflatex"
+  "Stat_Midterm.tex" 1697256410 10552 6b5b6d0295f6cb012d25ff1bbae65e03 ""
+  "c:/Users/Mathieu/Desktop/MidtermEdit/FallMidterms2023/STAT-2910/Stat_Midterm.tex" 1697256410 10552 6b5b6d0295f6cb012d25ff1bbae65e03 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1697217954 3524 cb3e574dea2d1052e39280babc910dc8 ""
-  "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1697171335 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1697171335 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1697171335 1524 4414a8315f39513458b80dfc63bff03a ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1697171335 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -16,7 +15,6 @@
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1697171335 1124 6c73e740cf17375f03eec0ee63599741 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1697171335 1116 933a60c408fc0a863a92debe84b2d294 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1697171335 1120 8b7d695260f3cff42e636090a8002094 ""
-  "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1697170131 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1697170131 32080 340ef9bf63678554ee606688e7b5339d ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1697170131 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1697170131 36281 c355509802a035cadc5f15869451dcee ""
