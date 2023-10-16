@@ -1,4 +1,4 @@
-# Midterm clarification
+# Midterm Clarification
 
 - The journey of a keystroke from when you press a key on your keyboard to the point where it triggers an interrupt request (IRQ) and is eventually processed by the operating system involves several steps. Here's a simplified overview of the process:
 
@@ -19,3 +19,20 @@
 - User Interaction: The application or service that receives the keyboard input can now react to the keypress, updating the user interface or performing the desired action.
 
 - It's important to note that this is a simplified overview, and the actual process may vary depending on the hardware and operating system in use. Additionally, modern keyboards may use USB or other protocols, which have slightly different mechanisms, but the fundamental concept of using interrupts and scan codes to handle keyboard input remains similar.
+
+## 6. What type of linking is a system call: static or dynamic? Why? 
+
+
+- System calls in an operating system are typically implemented using dynamic linking. Here's why:
+
+- Dynamic Linking for Efficiency: System calls are core components of the operating system, and they are frequently used by various programs and processes. Dynamic linking allows the operating system to load and manage system call routines more efficiently. With dynamic linking, the code for system calls is stored in shared libraries (e.g., DLLs on Windows or shared objects on Unix-like systems). These libraries are loaded into memory only once, and multiple processes can share the same instance of the code. This reduces memory usage and makes the system more efficient.
+
+- Runtime Loading: Dynamic linking enables the operating system to load and link the system call code at runtime. This means that system call implementations can be updated or patched without requiring a recompilation of the entire operating system or any dependent programs. This flexibility is important for maintaining and updating an operating system without causing disruption.
+
+- Isolation: Dynamic linking also allows for isolation between processes. Each process can have its own virtual address space, and when a system call is invoked, the operating system can switch context and execute the appropriate code in the kernel while maintaining the separation between processes. This is a key aspect of memory protection and security in modern operating systems.
+
+- Shared Libraries: Many operating systems and libraries use shared libraries for various functions, not just system calls. Dynamic linking allows multiple programs to share these libraries, again reducing memory usage and enabling updates to shared code without recompiling all dependent programs.
+
+- In contrast, static linking involves including the actual code of the linked functions in the program executable, making the binary larger and less efficient in terms of memory usage and updates. System calls are typically too fundamental and numerous to be statically linked into every program, which would be impractical.
+
+- So, to summarize, dynamic linking is preferred for system calls because it offers better efficiency, runtime loading, isolation, and maintainability, which are all important aspects of modern operating systems.
