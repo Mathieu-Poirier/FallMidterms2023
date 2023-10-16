@@ -36,3 +36,71 @@
 - In contrast, static linking involves including the actual code of the linked functions in the program executable, making the binary larger and less efficient in terms of memory usage and updates. System calls are typically too fundamental and numerous to be statically linked into every program, which would be impractical.
 
 - So, to summarize, dynamic linking is preferred for system calls because it offers better efficiency, runtime loading, isolation, and maintainability, which are all important aspects of modern operating systems.
+
+## Let’s assume sh accepts scripts. Is it able to run bash scripts? How about the reverse; is bash able to run sh scripts? Justify your answer. (hint: think of sh as the POSIX standard.)
+
+- In most Unix-like systems, including Linux, "sh" is often a symbolic link or a hard link to a POSIX-compliant shell, such as "dash" or "bash" configured in POSIX mode. However, the behavior of "sh" and "bash" can vary between systems, so let's address your questions:
+
+- Running Bash Scripts with Sh (POSIX Standard): POSIX-compliant shells like "sh" are designed to be minimalistic and follow the POSIX standard. If you have a script written in Bash and you run it using "sh," it should work as long as you stick to POSIX-compliant features and syntax. If your Bash script uses Bash-specific features or syntax that aren't part of the POSIX standard, it may encounter errors when run with "sh." However, most basic Bash scripts should run without issues.
+
+- Running Sh Scripts with Bash: If you have a script written in "sh" (POSIX-compliant) and you run it with "bash," it should also work without any problems. Bash is a superset of POSIX-compliant shells, which means it includes all the features of a POSIX shell and more. So, running "sh" scripts with "bash" should be fully compatible.
+
+- It's important to note that while "sh" should be POSIX-compliant, "bash" provides many extensions and additional features beyond the POSIX standard. If you want to ensure cross-compatibility and portability, it's a good practice to write your scripts with POSIX-compliant syntax, which allows them to run on a wide range of Unix-like systems using "sh" or "bash" without issues.
+
+- In summary, "sh" can generally run Bash scripts that stick to POSIX-compliant features and syntax, and "bash" can run "sh" scripts without any issues since it includes all the features of a POSIX shell and more. However, for the best cross-compatibility, it's advisable to adhere to the POSIX standard when writing scripts intended to run on various Unix-like systems.
+
+## 7. What happens when your program file has the same name as a. one of the built-ins of a shell? b. one of the programs in directories defined in the PATH environment variable?
+
+- The behavior when your program file has the same name as:
+
+- One of the Built-Ins of a Shell:
+If your program file has the same name as one of the built-in commands of a shell, the shell will prioritize the built-in command over the external program file with the same name. When you invoke that command in the shell, it will execute the built-in command instead of running the external program file. Built-in commands are part of the shell itself, and they are typically more efficient and have direct access to the shell's internals.
+
+- For example, if you have a program file named "echo," and you try to run "echo" in the shell, the shell will use its built-in "echo" command instead of executing your program file.
+
+- One of the Programs in Directories Defined in the PATH Environment Variable:
+When you run a command in a shell, it searches for the command in directories listed in the PATH environment variable, in the order they appear. If your program file has the same name as a program in one of these directories, the shell will execute the program with the same name that is found in the directory listed first in the PATH. It won't execute your program file, even if it's in a different location.
+
+- For example, if your program file "myprogram" is in the current directory and there's a program with the same name "myprogram" in a directory listed in the PATH, the shell will execute the program from the directory defined in PATH.
+
+- To run your program file explicitly, you'll need to specify its path or provide a relative or absolute path to the program file, indicating its location in the filesystem. This ensures that the shell will execute the specific program file you intend to run.
+
+- In summary, built-in commands take precedence over external program files with the same name in a shell, and if there's a program in one of the directories defined in the PATH with the same name, the shell will execute that program, not your program file, unless you specify the path to your program file explicitly.
+
+## 6. How can we add a new environment variable? How can we make it persistent? What is the difference between adding and making persistent?
+
+- Adding a new environment variable and making it persistent involve two distinct steps: setting the variable for the current session and ensuring it's available across sessions and after system reboots. Here's how you can do both:
+
+- Adding a New Environment Variable (Temporary):
+
+- In most Unix-like systems (Linux, macOS), you can set an environment variable for the current session using the export command in your terminal. For example, to set an environment variable named MY_VARIABLE to the value "example," you can use the following command:
+
+- export MY_VARIABLE=example
+- This will make the environment variable MY_VARIABLE available for the duration of the current session. It will not persist after you close the terminal or reboot the system.
+
+- Making an Environment Variable Persistent (Permanent): To make an environment variable persistent so that it's available across sessions and system reboots, you need to modify the system's configuration files. The exact method for doing this can vary depending on your operating system:
+
+- Linux (e.g., Ubuntu):
+
+- To make an environment variable system-wide, you can define it in a file like /etc/environment. Edit the file as the root user or with sudo. For example:
+sudo nano /etc/environment. Add your environment variable in the format NAME="value" (without export) and save the file.
+
+- To make an environment variable available for all users, you can add it to /etc/launchd.conf. For user-specific variables, you can add them to ~/.bash_profile or ~/.zshrc, depending on your shell.
+
+- Adding an environment variable using export or a similar command in your shell sets the variable for the current session only. It will be available for as long as that session is active, but it won't persist after you close the terminal or log out.
+
+- Making an environment variable persistent involves configuring the system to load the variable every time you start a new session or reboot the system. It ensures the variable remains available across sessions and system restarts.
+
+- In summary, adding an environment variable is a temporary action, while making it persistent ensures it remains available and retains its value in future sessions and after system reboots. The process for making an environment variable persistent varies depending on the operating system you are using.
+
+## 10. Does sh has the ability to run scripts? Justify your answer.
+
+- Yes, the "sh" shell has the ability to run scripts. "sh" is a command-line interpreter for the Bourne shell, which is a simple and widely used Unix shell. You can create shell scripts using the Bourne shell syntax, save them in files with a ".sh" extension, and then execute these scripts using the "sh" interpreter.
+
+- To run a script with "sh," you can use the following command in your terminal:
+
+- sh your_script.sh
+
+- Replace "your_script.sh" with the actual filename of your shell script. The "sh" interpreter will read and execute the commands in the script file, allowing you to automate tasks, perform system administration tasks, or run sequences of commands.
+
+- Keep in mind that "sh" is a basic shell and may not support some advanced features and extensions available in more modern shells like Bash. If your script relies on specific Bash features, you may encounter compatibility issues when running it with "sh." However, for basic scripting and portability, "sh" is a reliable option, as it follows the POSIX shell standard.
